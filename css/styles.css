@@ -1,0 +1,63 @@
+/*COLORES*/
+/*
+    color principal : #AF997F
+    color textos : #3b3d40
+    color negro main: #000
+    color textos secundario: #bbbaba
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Dosis Light";
+  src: url("../fonts/Dosis-Light.ttf");
+}
+
+@font-face {
+  font-family: "Dosis Regular";
+  src: url("../fonts/Dosis-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Dosis Medium";
+  src: url("../fonts/Dosis-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Dosis ExtraBold";
+  src: url("../fonts/Dosis-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+.navbar {
+  -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.178);
+          box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.178);
+}
+
+.navbar-brand {
+  color: #000;
+  font-family: "Dosis ExtraBold";
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-size: 0.8125rem;
+  font-family: "Open Sans";
+  font-weight: 400;
+  color: #000;
+}
+
+.color-principal {
+  color: #af997f;
+}
+
+.navbar-toggler {
+  border: none;
+}
+/*# sourceMappingURL=styles.css.map */
