@@ -1,15 +1,3 @@
-/*COLORES*/
-/*
-    color principal : #AF997F
-    color textos : #3b3d40
-    color negro main: #000
-    color textos secundario: #bbbaba
-*/
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 @font-face {
   font-family: "Dosis Light";
   src: url("../fonts/Dosis-Light.ttf");
@@ -59,5 +47,61 @@
 
 .navbar-toggler {
   border: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: black;
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.imagen-flotante {
+  border: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+  z-index: -1;
+}
+
+.anti-drag {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999;
+}
+
+.letra-up::first-letter {
+  text-transform: uppercase;
+}
+
+.titulo {
+  font-size: clamp(2.5rem, 13vw, 7.5rem);
+  font-family: "Dosis Medium";
+}
+
+.subtitulo {
+  font-size: clamp(0.6rem, 2.5vw, 1.5rem);
+  font-family: "Dosis Light";
+  letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+  .titulo,
+  .subtitulo {
+    letter-spacing: 3px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

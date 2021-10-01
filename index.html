@@ -10,15 +10,77 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <script
-      src="https://kit.fontawesome.com/104a2e09d4.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="css/styles.css" />
     <title>Elise</title>
   </head>
   <body>
     <div class="content-fluid">
+      <div class="row swiper mySwiper">
+        <div class="anti-drag"></div>
+        <div class="swiper-wrapper">
+          <div
+            class="
+              swiper-slide
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+            "
+          >
+            <img
+              data-src="./images/1.jpg"
+              class="swiper-lazy imagen-flotante"
+            />
+            <h1 class="text-white text-uppercase titulo pt-5">
+              diseño de marca
+            </h1>
+            <p class="text-white letra-up subtitulo">
+              la marca del mañana, hoy
+            </p>
+          </div>
+          <div
+            class="
+              swiper-slide
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+            "
+          >
+            <img
+              data-src="./images/pexels-alena-shekhovtcova-6075004.jpg"
+              class="swiper-lazy imagen-flotante"
+            />
+            <h1 class="text-white text-uppercase titulo">diseño ui / ux</h1>
+            <p class="text-white letra-up subtitulo">
+              creamos experiencias de calidad
+            </p>
+          </div>
+          <div
+            class="
+              swiper-slide
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+            "
+          >
+            <img
+              data-src="./images/pexels-cottonbro-4904563.jpg"
+              class="swiper-lazy imagen-flotante"
+            />
+            <h1 class="text-white text-uppercase titulo">diseño grafico</h1>
+            <p class="text-white letra-up subtitulo">
+              los diseños profesionales que necesitas
+            </p>
+          </div>
+        </div>
+      </div>
       <nav
         class="
           navbar navbar-expand-md
@@ -146,6 +208,7 @@
       src="https://kit.fontawesome.com/104a2e09d4.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
