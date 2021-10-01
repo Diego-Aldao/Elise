@@ -19,7 +19,8 @@
     <title>Elise</title>
   </head>
   <body>
-    <div class="content-fluid">
+    <div class="container-fluid px-0">
+      <!--INICIO HEADER PRINCIPAL-->
       <div class="row swiper mySwiper">
         <div class="anti-drag"></div>
         <div class="swiper-wrapper">
@@ -81,118 +82,180 @@
           </div>
         </div>
       </div>
-      <nav
-        class="
-          navbar navbar-expand-md
-          text-capitalize
-          px-4 px-md-5
-          py-2 py-md-3
-        "
-      >
-        <a class="navbar-brand" href="#">elise</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
+      <!--FIN HEADER PRINCIPAL-->
+      <!--INICIO NAVEGACION-->
+      <nav class="navbar navbar-expand-md text-capitalize py-2 py-md-3">
+        <div class="container-lg">
+          <a class="navbar-brand" href="#">elise</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li
-              class="
-                nav-item
-                px-1 px-lg-2
-                pl-3 pl-md-1
-                py-1 py-md-0
-                text-uppercase
-                color-principal
-              "
-            >
-              <a class="nav-link color-principal" href="#"
-                >inicio
-                <span class="sr-only color-principal">(current)</span></a
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li
+                class="
+                  nav-item
+                  px-1 px-lg-2
+                  pl-3 pl-md-1
+                  py-1 py-md-0
+                  text-uppercase
+                  color-principal
+                "
               >
-            </li>
-            <li
-              class="
-                nav-item
-                px-1
-                pl-3 pl-md-1
-                px-lg-2
-                py-1 py-md-0
-                text-uppercase
-              "
-            >
-              <a class="nav-link color-negro-main" href="#">servicios</a>
-            </li>
-            <li
-              class="
-                nav-item
-                px-1
-                pl-3 pl-md-1
-                px-lg-2
-                py-1 py-md-0
-                text-uppercase
-              "
-            >
-              <a class="nav-link color-negro-main" href="#">work</a>
-            </li>
-            <li
-              class="
-                nav-item
-                px-1
-                pl-3 pl-md-1
-                px-lg-2
-                py-1 py-md-0
-                text-uppercase
-              "
-            >
-              <a class="nav-link color-negro-main" href="#">proceso</a>
-            </li>
-            <li
-              class="
-                nav-item
-                px-1
-                pl-3 pl-md-1
-                px-lg-2
-                py-1 py-md-0
-                text-uppercase
-              "
-            >
-              <a class="nav-link color-negro-main" href="#">equipo</a>
-            </li>
-            <li
-              class="
-                nav-item
-                px-1
-                pl-3 pl-md-1
-                px-lg-2
-                py-1 py-md-0
-                text-uppercase
-              "
-            >
-              <a class="nav-link color-negro-main" href="#">noticias</a>
-            </li>
-            <li
-              class="
-                nav-item
-                px-1
-                pl-3 pl-md-1
-                px-lg-2
-                py-1 py-md-0
-                text-uppercase
-                pr-lg-5
-              "
-            >
-              <a class="nav-link color-negro-main" href="#">contacto</a>
-            </li>
-          </ul>
+                <a class="nav-link color-principal" href="#"
+                  >inicio
+                  <span class="sr-only color-principal">(current)</span></a
+                >
+              </li>
+              <li
+                class="
+                  nav-item
+                  px-1
+                  pl-3 pl-md-1
+                  px-lg-2
+                  py-1 py-md-0
+                  text-uppercase
+                "
+              >
+                <a class="nav-link color-negro-main" href="#">servicios</a>
+              </li>
+              <li
+                class="
+                  nav-item
+                  px-1
+                  pl-3 pl-md-1
+                  px-lg-2
+                  py-1 py-md-0
+                  text-uppercase
+                "
+              >
+                <a class="nav-link color-negro-main" href="#">work</a>
+              </li>
+              <li
+                class="
+                  nav-item
+                  px-1
+                  pl-3 pl-md-1
+                  px-lg-2
+                  py-1 py-md-0
+                  text-uppercase
+                "
+              >
+                <a class="nav-link color-negro-main" href="#">proceso</a>
+              </li>
+              <li
+                class="
+                  nav-item
+                  px-1
+                  pl-3 pl-md-1
+                  px-lg-2
+                  py-1 py-md-0
+                  text-uppercase
+                "
+              >
+                <a class="nav-link color-negro-main" href="#">equipo</a>
+              </li>
+              <li
+                class="
+                  nav-item
+                  px-1
+                  pl-3 pl-md-1
+                  px-lg-2
+                  py-1 py-md-0
+                  text-uppercase
+                "
+              >
+                <a class="nav-link color-negro-main" href="#">noticias</a>
+              </li>
+              <li
+                class="
+                  nav-item
+                  px-1
+                  pl-3 pl-md-1
+                  px-lg-2
+                  py-1 py-md-0
+                  text-uppercase
+                "
+              >
+                <a class="nav-link color-negro-main" href="#">contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
+      <!--FIN NAVEGACION-->
+      <!--INICIO CONTENIDO PRINCIPAL-->
+      <div class="container-md">
+        <div class="row">
+          <div
+            class="
+              col-nosotros col-12
+              p-0
+              d-flex
+              justify-content-center
+              align-items-center
+            "
+          >
+            <p class="texto-nosotros text-uppercase">nosotros</p>
+          </div>
+          <div class="col-12 col-md-6 pr-lg-4">
+            <div class="img-col-1">
+              <img
+                src="./images/nosotros/pexels-vlada-karpovich-4050319.jpg"
+                alt=""
+              />
+            </div>
+            <div class="contenido-col-1 my-4 my-lg-5 text-justify">
+              <p class="textos m-0">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Officia suscipit, hic tenetur magnam similique illo quidem cum
+                nobis, dolorem odit error dolore eaque! Fugiat molestias
+                asperiores neque nam quaerat. Aliquid neque dolore voluptas
+                maxime, recusandae asperiores at modi perferendis consequuntur
+                distinctio? Repellendus consectetur quae ipsam dicta autem
+                itaque enim. Sit repellendus odio incidunt illo adipisci.
+                Cupiditate maiores iure itaque facere?
+              </p>
+            </div>
+            <div class="video-col-1">
+              <img
+                src="./images/nosotros/pexels-cottonbro-4065889.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-6 pl-lg-4">
+            <h3 class="titulo-col-2 mt-4 mt-md-0">
+              creamos experiencias que transforman marcas y hacen crecer
+              empresas
+            </h3>
+            <div class="contenido-col-2 my-4 my-lg-5 text-justify">
+              <p class="textos m-0">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Officia suscipit, hic tenetur magnam similique illo quidem cum
+                nobis, dolorem odit error dolore eaque! Fugiat molestias
+                asperiores neque nam quaerat. Aliquid neque dolore voluptas
+                maxime, recusandae asperiores at modi perferendis consequuntur
+                distinctio?
+              </p>
+            </div>
+            <div class="img-col-2">
+              <img
+                src="./images/nosotros/pexels-ready-made-4022021.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--FIN CONTENIDO PRINCIPAL-->
     </div>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
