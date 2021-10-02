@@ -59,14 +59,14 @@ img {
 }
 
 .col-headers {
-  height: 180px;
+  padding: 50px 0px 30px;
 }
 
 .col-headers .texto-headers {
-  font-family: "Dosis Medium";
+  font-family: "Dosis Regular";
   color: #000;
   font-size: 3.125rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
 }
 
 .container-md {
@@ -192,13 +192,13 @@ img {
 
 @media (min-width: 480px) {
   .col-headers {
-    height: 250px;
+    padding: 70px 0px 30px;
   }
 }
 
 @media (min-width: 768px) {
   .col-headers {
-    height: 300px;
+    padding: 100px 0px 50px;
   }
   .img-col-1 {
     max-height: 210px;
