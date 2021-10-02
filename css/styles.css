@@ -37,11 +37,36 @@
   font-size: 1.125rem;
 }
 
+.titulos-h3 {
+  font-family: "Dosis Regular";
+  font-size: 2rem;
+  max-width: 320px;
+}
+
+.titulos-h3::first-letter {
+  text-transform: capitalize;
+}
+
 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.col-headers {
+  height: 180px;
+}
+
+.col-headers .texto-headers {
+  font-family: "Dosis Medium";
+  color: #000;
+  font-size: 3.125rem;
+  letter-spacing: 2px;
+}
+
+.container-md {
+  padding-bottom: 100px;
 }
 
 .navbar {
@@ -123,21 +148,6 @@ img {
   }
 }
 
-.container-md {
-  padding-bottom: 100px;
-}
-
-.col-nosotros {
-  height: 180px;
-}
-
-.col-nosotros .texto-nosotros {
-  font-family: "Dosis Medium";
-  color: #000;
-  font-size: 3.125rem;
-  letter-spacing: 2px;
-}
-
 .img-col-1,
 .video-col-1 {
   width: 100%;
@@ -149,24 +159,14 @@ img {
   height: 90vw;
 }
 
-.titulo-col-2 {
-  font-family: "Dosis Regular";
-  font-size: 2rem;
-  max-width: 320px;
-}
-
-.titulo-col-2::first-letter {
-  text-transform: capitalize;
-}
-
 @media (min-width: 480px) {
-  .col-nosotros {
+  .col-headers {
     height: 250px;
   }
 }
 
 @media (min-width: 768px) {
-  .col-nosotros {
+  .col-headers {
     height: 300px;
   }
   .img-col-1 {
@@ -201,6 +201,84 @@ img {
   }
   .img-col-2 {
     max-height: 570px;
+  }
+}
+
+.contenido-servicios {
+  background: url("../images/parallax/servicios-parallax.jpg") center/cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.contenido-servicios-2 {
+  position: relative;
+  z-index: 2;
+}
+
+.contenido-servicios::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.836);
+}
+
+.iconos-servicios {
+  font-size: 2.3rem;
+  font-weight: 100;
+  color: #bbbaba;
+  opacity: 0.5;
+}
+
+.texto-servicios {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: "Dosis Light";
+  opacity: 0.5;
+}
+
+.icono-current {
+  color: #af997f;
+  opacity: 1;
+}
+
+.texto-current {
+  opacity: 1;
+}
+
+.textos-secundarios {
+  color: #bbbaba;
+  line-height: 2;
+}
+
+.titulo-servicios {
+  font-size: 1.375rem;
+  line-height: 1.7;
+  max-width: 100%;
+}
+
+.span-titulo-servicios {
+  display: block;
+}
+
+.span-titulo-servicios::first-letter {
+  text-transform: capitalize;
+}
+
+@media (min-width: 992px) {
+  .iconos-servicios {
+    font-size: 3rem;
+  }
+  .texto-servicios {
+    font-size: 15px;
+  }
+  .titulo-servicios {
+    font-size: 1.5rem;
+  }
+  .textos-secundarios {
+    line-height: 1.7;
   }
 }
 /*# sourceMappingURL=styles.css.map */
