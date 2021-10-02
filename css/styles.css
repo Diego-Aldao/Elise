@@ -281,4 +281,10 @@ img {
     line-height: 1.7;
   }
 }
+
+.btn {
+  font-family: "Dosis Light";
+  font-size: 1.2rem;
+  border-radius: 0px;
+}
 /*# sourceMappingURL=styles.css.map */
