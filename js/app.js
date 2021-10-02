@@ -1,3 +1,9 @@
+var swiper2 = new Swiper(".swiper-proceso", {
+  spaceBetween: 500,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
 var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
   loop: true,
@@ -6,7 +12,7 @@ var swiper = new Swiper(".mySwiper", {
   lazy: true,
   preloadImages: false,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination-2",
     clickable: true,
   },
 });
