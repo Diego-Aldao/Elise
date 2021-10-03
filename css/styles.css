@@ -434,4 +434,54 @@ img {
 .swiper-noticias .titulo-tarjeta {
   font-size: 1.5rem;
 }
+
+.icono-contacto {
+  font-size: clamp(2.25rem, 5.5vw, 3.125rem);
+  color: #000;
+}
+
+.texto-contacto {
+  font-family: "Dosis Medium";
+  font-size: 1rem;
+  color: #000;
+}
+
+.texto-disabled {
+  opacity: 0.7;
+}
+
+.form-mio {
+  background: #000;
+  border-radius: 0px;
+  width: 100%;
+  padding: 20px 30px 20px 20px;
+  font-family: "Dosis Medium";
+  border: none;
+}
+
+.form-mio::-webkit-input-placeholder {
+  color: #bbbaba;
+  text-transform: uppercase;
+}
+
+.form-mio:-ms-input-placeholder {
+  color: #bbbaba;
+  text-transform: uppercase;
+}
+
+.form-mio::-ms-input-placeholder {
+  color: #bbbaba;
+  text-transform: uppercase;
+}
+
+.form-mio::placeholder {
+  color: #bbbaba;
+  text-transform: uppercase;
+}
+
+.btn-form {
+  background: #000;
+  font-size: 1rem;
+  font-family: "Dosis Medium";
+}
 /*# sourceMappingURL=styles.css.map */

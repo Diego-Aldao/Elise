@@ -410,3 +410,36 @@ img {
     font-size: 1.5rem;
   }
 }
+
+//INICIO CONTACTO
+
+.icono-contacto {
+  font-size: clamp(2.25rem, 5.5vw, 3.125rem);
+  color: $color-negro-main;
+}
+.texto-contacto {
+  font-family: $fuentePrincipalMedium;
+  font-size: 1rem;
+  color: $color-negro-main;
+}
+.texto-disabled {
+  opacity: 0.7;
+}
+
+.form-mio {
+  background: $color-negro-main;
+  border-radius: 0px;
+  width: 100%;
+  padding: 20px 30px 20px 20px;
+  font-family: $fuentePrincipalMedium;
+  border: none;
+}
+.form-mio::placeholder {
+  color: $color-textos-secundario;
+  text-transform: uppercase;
+}
+.btn-form {
+  background: $color-negro-main;
+  font-size: 1rem;
+  font-family: $fuentePrincipalMedium;
+}
