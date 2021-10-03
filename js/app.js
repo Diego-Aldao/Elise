@@ -34,3 +34,15 @@ var swiper3 = new Swiper(".swiper-equipo", {
     el: ".swiper-pagination",
   },
 });
+
+var swiper4 = new Swiper(".swiper-noticias", {
+  spaceBetween: 30,
+  breakpoints: {
+    992: {
+      slidesPerView: 2,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
