@@ -357,4 +357,40 @@ img {
     width: 35%;
   }
 }
+
+.contenido-equipo .textos {
+  line-height: 1.8;
+}
+
+.progress {
+  height: 4px;
+  border-radius: none;
+  background: #f3f3f3;
+}
+
+.progress .progress-bar {
+  background: #af997f;
+}
+
+.texto-progress {
+  font-family: "Dosis Medium";
+  letter-spacing: 2px;
+  color: #000;
+}
+
+.swiper-equipo {
+  width: 100%;
+  height: 440px;
+  max-width: 350px;
+}
+
+.swiper-equipo .swiper-slide {
+  background: black;
+}
+
+@media (min-width: 580px) {
+  .swiper-equipo {
+    max-width: 100%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

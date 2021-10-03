@@ -340,3 +340,38 @@ img {
     }
   }
 }
+
+//INICIO EQUIPO
+.contenido-equipo {
+  .textos {
+    line-height: 1.8;
+  }
+}
+.progress {
+  height: 4px;
+  border-radius: none;
+  background: rgb(243, 243, 243);
+  .progress-bar {
+    background: $color-principal;
+  }
+}
+.texto-progress {
+  font-family: $fuentePrincipalMedium;
+  letter-spacing: 2px;
+  color: $color-negro-main;
+}
+
+.swiper-equipo {
+  width: 100%;
+  height: 440px;
+  max-width: 350px;
+  .swiper-slide {
+    background: rgb(0, 0, 0);
+  }
+}
+
+@media (min-width: 580px) {
+  .swiper-equipo {
+    max-width: 100%;
+  }
+}
