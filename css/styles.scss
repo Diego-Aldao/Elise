@@ -11,18 +11,21 @@
   font-family: "Dosis Medium";
   src: url("../fonts/Dosis-Medium.ttf");
 }
-@font-face {
-  font-family: "Dosis ExtraBold";
-  src: url("../fonts/Dosis-ExtraBold.ttf");
-}
 $fuentePrincipalLight: "Dosis Light";
 $fuentePrincipalRegular: "Dosis Regular";
 $fuentePrincipalMedium: "Dosis Medium";
-$fuentePrincipalExtraBold: "Dosis ExtraBold";
 
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Birthstone";
+  src: url("../fonts/Birthstone-Regular.ttf");
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 //COLORES
@@ -102,11 +105,15 @@ img {
 //NAV
 .navbar {
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.178);
+  top: 0px;
+  position: sticky;
+  z-index: 99999999;
 }
 .navbar-brand {
   color: $color-negro-main;
-  font-family: $fuentePrincipalExtraBold;
-  font-size: 1.5rem;
+  font-family: "Birthstone";
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 0.8;
 }
 .nav-link {
   font-size: 0.8125rem;
@@ -115,7 +122,19 @@ img {
   transition: all 0.3s;
 }
 .nav-link:hover {
-  color: $color-textos-secundario;
+  color: $color-principal;
+}
+.navbar-brand:hover {
+  color: $color-negro-main;
+}
+
+@media (min-width: 850px) {
+  .nav-link {
+    letter-spacing: 1px;
+  }
+  .navbar {
+    height: 80px;
+  }
 }
 
 //HEADER PRINCIPAL

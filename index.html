@@ -22,7 +22,7 @@
   <body>
     <div class="container-fluid px-0">
       <!--INICIO HEADER PRINCIPAL-->
-      <div class="row swiper mySwiper">
+      <div class="row swiper mySwiper" id="inicio">
         <div class="anti-drag"></div>
         <div class="swiper-wrapper">
           <div
@@ -85,9 +85,9 @@
       </div>
       <!--FIN HEADER PRINCIPAL-->
       <!--INICIO NAVEGACION-->
-      <nav class="navbar navbar-expand-md text-capitalize py-2 py-md-3">
+      <nav class="navbar navbar-expand-md py-1 py-md-3 bg-white">
         <div class="container-lg">
-          <a class="navbar-brand" href="#">elise</a>
+          <a class="navbar-brand text-capitalize" href="#inicio">elise</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -98,20 +98,23 @@
             <span class="ti-view-grid"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="collapse navbar-collapse bg-white w-100"
+            id="navbarSupportedContent"
+          >
             <ul class="navbar-nav ml-auto">
               <li
                 class="
                   nav-item
                   px-1 px-lg-2
                   pl-3 pl-md-1
-                  py-1 py-md-0
+                  py-2 py-md-0
                   text-uppercase
                   color-principal
                 "
               >
-                <a class="nav-link color-principal" href="#"
-                  >inicio
+                <a class="nav-link color-principal" href="#nosotros"
+                  >nosotros
                   <span class="sr-only color-principal">(current)</span></a
                 >
               </li>
@@ -121,11 +124,13 @@
                   px-1
                   pl-3 pl-md-1
                   px-lg-2
-                  py-1 py-md-0
+                  py-2 py-md-0
                   text-uppercase
                 "
               >
-                <a class="nav-link color-negro-main" href="#">servicios</a>
+                <a class="nav-link color-negro-main" href="#servicios"
+                  >servicios</a
+                >
               </li>
               <li
                 class="
@@ -133,11 +138,13 @@
                   px-1
                   pl-3 pl-md-1
                   px-lg-2
-                  py-1 py-md-0
+                  py-2 py-md-0
                   text-uppercase
                 "
               >
-                <a class="nav-link color-negro-main" href="#">work</a>
+                <a class="nav-link color-negro-main" href="#trabajos"
+                  >trabajos</a
+                >
               </li>
               <li
                 class="
@@ -145,11 +152,11 @@
                   px-1
                   pl-3 pl-md-1
                   px-lg-2
-                  py-1 py-md-0
+                  py-2 py-md-0
                   text-uppercase
                 "
               >
-                <a class="nav-link color-negro-main" href="#">proceso</a>
+                <a class="nav-link color-negro-main" href="#proceso">proceso</a>
               </li>
               <li
                 class="
@@ -157,11 +164,11 @@
                   px-1
                   pl-3 pl-md-1
                   px-lg-2
-                  py-1 py-md-0
+                  py-2 py-md-0
                   text-uppercase
                 "
               >
-                <a class="nav-link color-negro-main" href="#">equipo</a>
+                <a class="nav-link color-negro-main" href="#equipo">equipo</a>
               </li>
               <li
                 class="
@@ -169,11 +176,13 @@
                   px-1
                   pl-3 pl-md-1
                   px-lg-2
-                  py-1 py-md-0
+                  py-2 py-md-0
                   text-uppercase
                 "
               >
-                <a class="nav-link color-negro-main" href="#">noticias</a>
+                <a class="nav-link color-negro-main" href="#noticias"
+                  >noticias</a
+                >
               </li>
               <li
                 class="
@@ -181,11 +190,13 @@
                   px-1
                   pl-3 pl-md-1
                   px-lg-2
-                  py-1 py-md-0
+                  py-2 py-md-0
                   text-uppercase
                 "
               >
-                <a class="nav-link color-negro-main" href="#">contacto</a>
+                <a class="nav-link color-negro-main" href="#contacto"
+                  >contacto</a
+                >
               </li>
             </ul>
           </div>
@@ -193,7 +204,7 @@
       </nav>
       <!--FIN NAVEGACION-->
       <!--INICIO CONTENIDO PRINCIPAL-->
-      <div class="container-md">
+      <div class="container-md" id="nosotros">
         <div class="row">
           <div
             class="
@@ -257,7 +268,7 @@
       </div>
       <!--FIN CONTENIDO PRINCIPAL-->
       <!--INICIO SERVICIOS-->
-      <div class="container-fluid contenido-parallax">
+      <div class="container-fluid contenido-parallax" id="servicios">
         <div class="container-md contenido-parallax-2">
           <div class="row">
             <div
@@ -346,7 +357,7 @@
       </div>
       <!--FIN SERVICIOS-->
       <!--INICIO TRABAJOS-->
-      <div class="container-md">
+      <div class="container-md" id="trabajos">
         <div class="row">
           <div
             class="
@@ -455,7 +466,7 @@
       </div>
       <!--FIN TRABAJOS-->
       <!--INICIO PROCESO-->
-      <div class="container-fluid contenido-parallax">
+      <div class="container-fluid contenido-parallax" id="proceso">
         <div class="container-md px-0 contenido-parallax-2">
           <div class="row">
             <div
@@ -567,7 +578,7 @@
       </div>
       <!--FIN PROCESO-->
       <!--INICIO EQUIPO-->
-      <div class="container-md">
+      <div class="container-md" id="equipo">
         <div class="row">
           <div
             class="
@@ -647,7 +658,7 @@
       </div>
       <!--FIN EQUIPO-->
       <!--INICIO NOTICIAS-->
-      <div class="container-fluid contenido-parallax">
+      <div class="container-fluid contenido-parallax" id="noticias">
         <div class="container-md px-0 contenido-parallax-2">
           <div class="row">
             <div
@@ -760,7 +771,7 @@
       </div>
       <!--FIN NOTICIAS-->
       <!--INICIO CONTACTO-->
-      <div class="container-md">
+      <div class="container-md" id="contacto">
         <div class="row">
           <div
             class="
