@@ -370,6 +370,37 @@ img {
   }
 }
 
+//INICIO TRABAJOS
+.col-imagen {
+  position: relative;
+  overflow: hidden;
+  h5 {
+    font-family: $fuentePrincipalLight;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+}
+.contenido-imagen-trabajo {
+  width: calc(
+    100% - 30px
+  ); //30PX DEL PADDING DE LAS COLUMNAS DE BOOTSTRAP QUE CON POSITION ABSOLUTE OMITO
+  height: 100%;
+  top: -100%;
+  position: absolute;
+  background: $color-principal;
+  z-index: 1;
+}
+
+.imagenes-trabajos {
+  width: 100%;
+  position: relative;
+}
+
 //INICIO PROCESO
 .swiper-proceso {
   padding-top: 40px;

@@ -65,3 +65,48 @@ const scrollearBarraSuperior = () => {
 window.onscroll = () => {
   scrollearBarraSuperior();
 };
+
+//GSAP TRABAJOS
+
+const animacionImagen = (e) => {
+  let contenidoImagen = e.currentTarget.querySelector(
+    ".contenido-imagen-trabajo"
+  );
+  let imagen = e.currentTarget.querySelector(".imagenes-trabajos");
+  gsap.to(contenidoImagen, {
+    top: "0px",
+    duration: 0.5,
+    ease: Power4.easeOut,
+  });
+  gsap.to(imagen, {
+    duration: 0.5,
+    top: "50%",
+    ease: Power4.easeOut,
+  });
+};
+
+const animacionImagenSalida = (e) => {
+  let contenidoImagen = e.currentTarget.querySelector(
+    ".contenido-imagen-trabajo"
+  );
+  let imagen = e.currentTarget.querySelector(".imagenes-trabajos");
+  gsap.to(contenidoImagen, {
+    top: "-100%",
+    duration: 0.5,
+    ease: Power4.easeOut,
+  });
+  gsap.to(imagen, {
+    duration: 0.5,
+    top: "0px",
+    ease: Power4.easeOut,
+  });
+};
+
+let contenedorImagen = document.querySelectorAll(".col-imagen");
+
+contenedorImagen.forEach((contenedor) => {
+  contenedor.addEventListener("mouseover", animacionImagen);
+});
+contenedorImagen.forEach((contenedor) => {
+  contenedor.addEventListener("mouseleave", animacionImagenSalida);
+});

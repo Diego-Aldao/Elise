@@ -421,6 +421,37 @@ img {
   }
 }
 
+.col-imagen {
+  position: relative;
+  overflow: hidden;
+}
+
+.col-imagen h5 {
+  font-family: "Dosis Light";
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.col-imagen p {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.contenido-imagen-trabajo {
+  width: calc( 100% - 30px);
+  height: 100%;
+  top: -100%;
+  position: absolute;
+  background: #af997f;
+  z-index: 1;
+}
+
+.imagenes-trabajos {
+  width: 100%;
+  position: relative;
+}
+
 .swiper-proceso {
   padding-top: 40px;
 }
