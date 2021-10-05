@@ -513,6 +513,38 @@ img {
   font-family: "Dosis Medium";
   letter-spacing: 2px;
   color: #000;
+  position: relative;
+}
+
+.flotante-progress {
+  position: absolute;
+  top: 0px;
+  right: 12%;
+  font-size: 0.65rem;
+  color: #fff;
+  background: #000;
+  padding: 2px 4px;
+  text-align: center;
+}
+
+.progress-02 {
+  right: 8%;
+}
+
+.progress-03 {
+  right: 2%;
+}
+
+.flotante-progress::after {
+  content: "";
+  background: black;
+  position: absolute;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .swiper-equipo {
