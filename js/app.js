@@ -12,7 +12,7 @@ var swiper = new Swiper(".mySwiper", {
   lazy: true,
   preloadImages: false,
   pagination: {
-    el: ".swiper-pagination-2",
+    el: ".swiper-pagination",
     clickable: true,
   },
 });
@@ -46,3 +46,22 @@ var swiper4 = new Swiper(".swiper-noticias", {
     el: ".swiper-pagination",
   },
 });
+
+//SCROLL LOGO
+
+let logoTop = document.querySelector(".logo-top");
+
+const scrollearBarraSuperior = () => {
+  if (
+    document.body.scrollTop > 250 ||
+    document.documentElement.scrollTop > 250
+  ) {
+    logoTop.style.opacity = 0;
+  } else {
+    logoTop.style.opacity = 1;
+  }
+};
+
+window.onscroll = () => {
+  scrollearBarraSuperior();
+};

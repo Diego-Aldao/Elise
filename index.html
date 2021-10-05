@@ -21,9 +21,20 @@
   </head>
   <body>
     <div class="container-fluid px-0">
+      <div class="container-lg logo-flotante">
+        <a
+          class="navbar-brand text-capitalize mr-auto text-white logo-top"
+          href="#inicio"
+          >elise</a
+        >
+      </div>
       <!--INICIO HEADER PRINCIPAL-->
-      <div class="row swiper mySwiper" id="inicio">
+      <div
+        class="row swiper mySwiper d-flex justify-content-center"
+        id="inicio"
+      >
         <div class="anti-drag"></div>
+        <a href="#nosotros" class="animacion-scroll"></a>
         <div class="swiper-wrapper">
           <div
             class="
@@ -58,7 +69,9 @@
               data-src="./images/pexels-alena-shekhovtcova-6075004.jpg"
               class="swiper-lazy imagen-flotante"
             />
-            <h1 class="text-white text-uppercase titulo">diseño ui / ux</h1>
+            <h1 class="text-white text-uppercase titulo pt-5">
+              diseño ui / ux
+            </h1>
             <p class="text-white letra-up subtitulo">
               creamos experiencias de calidad
             </p>
@@ -76,12 +89,15 @@
               data-src="./images/pexels-cottonbro-4904563.jpg"
               class="swiper-lazy imagen-flotante"
             />
-            <h1 class="text-white text-uppercase titulo">diseño grafico</h1>
+            <h1 class="text-white text-uppercase titulo pt-5">
+              diseño grafico
+            </h1>
             <p class="text-white letra-up subtitulo">
-              los diseños profesionales que necesitas
+              los diseños profesionales que buscas
             </p>
           </div>
         </div>
+        <div class="swiper-pagination swiper-editado"></div>
       </div>
       <!--FIN HEADER PRINCIPAL-->
       <!--INICIO NAVEGACION-->
@@ -608,6 +624,14 @@
                   <img src="./images/equipo/4.jpg" alt="" />
                 </div>
               </div>
+              <div
+                class="
+                  swiper-pagination
+                  d-flex
+                  justify-content-center
+                  align-items-center
+                "
+              ></div>
             </div>
           </div>
           <div class="col-12 col-lg-5 mb-4">

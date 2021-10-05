@@ -96,10 +96,42 @@ img {
   background: rgba(0, 0, 0, 0.836);
 }
 
+//BOTONES / PAGINACION
 .btn {
   font-family: $fuentePrincipalLight;
   font-size: 1.2rem;
   border-radius: 0px;
+}
+
+.swiper-editado {
+  margin-right: 20px;
+  padding-top: 25px;
+  z-index: 9999999999999;
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    transition: background 0.5s;
+    background: white;
+    margin-bottom: 10px !important;
+  }
+  .swiper-pagination-bullet-active {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    position: relative;
+    background: none;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-pagination-bullet-active::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+  }
 }
 
 //NAV
@@ -143,6 +175,7 @@ img {
   height: 100vh;
   position: relative;
   background: $color-negro-main;
+  top: 0px;
 }
 .anti-drag {
   position: absolute;
@@ -151,6 +184,48 @@ img {
   width: 100%;
   height: 100%;
   z-index: 99999999;
+}
+
+.logo-flotante {
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+  height: 0px;
+}
+.logo-top {
+  transition: all 0.5s;
+}
+
+.animacion-scroll {
+  position: absolute;
+  bottom: 25px;
+  border: 2px solid white;
+  border-radius: 15px;
+  height: 30px;
+  width: 20px;
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.animacion-scroll::after {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 3px;
+  height: 4px;
+  animation: scroll 2s infinite;
+}
+@keyframes scroll {
+  0% {
+    top: 5px;
+  }
+  50% {
+    top: 15px;
+  }
+  100% {
+    top: 5px;
+  }
 }
 
 .swiper-slide {
@@ -170,7 +245,7 @@ img {
     text-transform: uppercase;
   }
   .titulo {
-    font-size: clamp(2.5rem, 13vw, 7.5rem);
+    font-size: clamp(1.8rem, 8vw, 7.5rem);
     font-family: $fuentePrincipalMedium;
   }
   .subtitulo {
