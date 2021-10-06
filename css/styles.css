@@ -366,25 +366,25 @@ img {
 
 .iconos-servicios {
   font-size: 2.3rem;
-  font-weight: 100;
+  font-weight: 400;
   color: #bbbaba;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .texto-servicios {
-  font-size: 13px;
+  font-size: 0.813rem;
   letter-spacing: 1px;
-  font-family: "Dosis Light";
-  opacity: 0.5;
+  font-family: "Dosis Regular";
+  opacity: 0.6;
 }
 
-.icono-current {
+.seleccionado .iconos-servicios,
+.seleccionado .texto-servicios {
+  opacity: 1;
+}
+
+.seleccionado .iconos-servicios {
   color: #af997f;
-  opacity: 1;
-}
-
-.texto-current {
-  opacity: 1;
 }
 
 .textos-secundarios {
@@ -393,7 +393,7 @@ img {
 }
 
 .titulo-servicios {
-  font-size: 1.375rem;
+  font-size: clamp(1.25rem, 5vw, 1.32rem);
   line-height: 1.7;
   max-width: 100%;
 }
@@ -407,17 +407,26 @@ img {
 }
 
 @media (min-width: 992px) {
+  .contenido-servicios {
+    min-height: 680px;
+  }
   .iconos-servicios {
     font-size: 3rem;
   }
   .texto-servicios {
-    font-size: 15px;
-  }
-  .titulo-servicios {
-    font-size: 1.5rem;
+    font-size: 0.875rem;
   }
   .textos-secundarios {
     line-height: 1.7;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenido-servicios {
+    min-height: 645px;
+  }
+  .texto-servicios {
+    font-size: 1rem;
   }
 }
 

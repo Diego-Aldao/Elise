@@ -110,3 +110,64 @@ contenedorImagen.forEach((contenedor) => {
 contenedorImagen.forEach((contenedor) => {
   contenedor.addEventListener("mouseleave", animacionImagenSalida);
 });
+
+//SERVICIOS
+
+let contenidoTitulos = [
+  '<span class="span-titulo-servicios">construimos las mejores marcas.</span>' +
+    '<span class="span-titulo-servicios">impulsa tu negocio al siguiente nivel.</span>' +
+    '<span class="span-titulo-servicios">soluciones hechas a medida.</span>',
+
+  '<span class="span-titulo-servicios">soluciones de marketing personalizadas.</span>' +
+    '<span class="span-titulo-servicios">impulsa tu negocio al siguiente nivel.</span>' +
+    '<span class="span-titulo-servicios">soluciones hechas a medida.</span>',
+
+  '<span class="span-titulo-servicios">dirección de diseño para empresas</span>' +
+    '<span class="span-titulo-servicios">impulsa tu negocio al siguiente nivel.</span>' +
+    '<span class="span-titulo-servicios">soluciones hechas a medida.</span>',
+
+  '<span class="span-titulo-servicios">creación de contenido profesional.</span>' +
+    '<span class="span-titulo-servicios">impulsa tu negocio al siguiente nivel.</span>' +
+    '<span class="span-titulo-servicios">soluciones hechas a medida.</span>',
+
+  '<span class="span-titulo-servicios">investigación profesional de consumidores.</span>' +
+    '<span class="span-titulo-servicios">impulsa tu negocio al siguiente nivel.</span>' +
+    '<span class="span-titulo-servicios">soluciones hechas a medida.</span>',
+];
+let contenidoTextos = [
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum rem molestias, qui commodi placeat quidem consequatur asperiores, fuga iure sequi voluptatem tempore dolore odit nulla ab quisquam sed unde pariatur! Iure architecto necessitatibus fuga, provident dignissimos.",
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum rem molestias, qui commodi placeat quidem consequatur asperiores, fuga iure sequi voluptatem tempore dolore odit nulla ab quisquam sed unde pariatur! Iure architecto necessitatibus fuga, provident dignissimos id ratione recusandae.",
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum rem molestias, qui commodi placeat quidem consequatur asperiores, fuga iure sequi voluptatem tempore dolore odit nulla ab quisquam sed unde pariatur! Iure architecto necessitatibus fuga.",
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum rem molestias, qui commodi placeat quidem consequatur asperiores, fuga iure sequi voluptatem tempore dolore odit nulla ab quisquam sed unde pariatur! Iure architecto necessitatibus fuga, provident dignissimos id ratione recusandae hic nesciunt unde ad.",
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum rem molestias, qui commodi placeat quidem consequatur asperiores, fuga iure sequi voluptatem tempore dolore odit nulla ab quisquam sed unde pariatur! Iure architecto necessitatibus fuga, provident dignissimos id ratione recusandae hic nesciunt unde ad illum officiis aspernatur qui ab maxime.",
+];
+
+let cambiarContenido = (e) => {
+  let esteIcono = e.currentTarget;
+  for (let i = 0; i < 5; i++) {
+    if (esteIcono.dataset.valor == i) {
+      let tituloServicios = document.querySelector(".titulo-servicios");
+      tituloServicios.innerHTML = contenidoTitulos[i];
+
+      let textoServicios = document.querySelector(".textos-secundarios");
+      textoServicios.innerHTML = contenidoTextos[i];
+    }
+  }
+};
+
+let cambiarEstilos = (e) => {
+  let esteIcono = e.currentTarget;
+  iconosServicios.forEach((icono) => {
+    icono.classList.remove("seleccionado");
+  });
+  esteIcono.classList.add("seleccionado");
+};
+
+let iconosServicios = document.querySelectorAll(".contenedor-iconos");
+
+iconosServicios.forEach((icono) => {
+  icono.addEventListener("click", cambiarContenido);
+});
+iconosServicios.forEach((icono) => {
+  icono.addEventListener("click", cambiarEstilos);
+});
