@@ -170,3 +170,49 @@ iconosServicios.forEach((icono) => {
 iconosServicios.forEach((icono) => {
   icono.addEventListener("click", cambiarEstilos);
 });
+
+//CONTACTO (ICONOS SEGUIR)
+const animacionIconos = (e) => {
+  let contenedorIconos = e.currentTarget.querySelector(
+    ".contenedor-icono-footer"
+  );
+  gsap.to(contenedorIconos, {
+    duration: 0.5,
+    top: "100%",
+    ease: Power4.easeOut,
+  });
+  let titulosIconos = e.currentTarget.querySelector(".titulos-icono");
+  gsap.to(titulosIconos, {
+    opacity: 1,
+    duration: 0.5,
+    margin: "0px",
+    ease: Power4.easeOut,
+  });
+};
+
+const animacionIconosSalida = (e) => {
+  let contenedorIconos = e.currentTarget.querySelector(
+    ".contenedor-icono-footer"
+  );
+  gsap.to(contenedorIconos, {
+    duration: 0.5,
+    top: "0px",
+    ease: Power4.easeOut,
+  });
+  let titulosIconos = e.currentTarget.querySelector(".titulos-icono");
+  gsap.to(titulosIconos, {
+    opacity: 0,
+    duration: 0.5,
+    margin: "0px 0px 30px",
+    ease: Power4.easeOut,
+  });
+};
+
+let iconosContactoFooter = document.querySelectorAll(".iconos-contacto-footer");
+
+iconosContactoFooter.forEach((icono) => {
+  icono.addEventListener("mouseover", animacionIconos);
+});
+iconosContactoFooter.forEach((icono) => {
+  icono.addEventListener("mouseleave", animacionIconosSalida);
+});
