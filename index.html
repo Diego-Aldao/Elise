@@ -1134,74 +1134,366 @@
             <p class="texto-headers text-uppercase">contacto</p>
           </div>
         </div>
-        <div class="row d-flex justify-content-center">
+        <nav>
           <div
-            class="
-              col-4 col-sm-3
-              d-flex
-              flex-column
-              align-items-center
-              justify-content-center
-            "
+            class="nav nav-tabs d-flex justify-content-center pb-5"
+            id="nav-tab"
+            role="tablist"
           >
-            <span class="ti-comment-alt icono-contacto mb-3"></span>
-            <p class="textos text-capitalize texto-contacto">contactanos</p>
+            <a
+              class="
+                nav-link
+                col-4 col-sm-3
+                d-flex
+                flex-column
+                align-items-center
+                justify-content-center
+                texto-disabled
+                active
+              "
+              id="nav-home-tab"
+              data-toggle="tab"
+              href="#nav-home"
+              role="tab"
+            >
+              <span class="ti-comment-alt icono-contacto mb-3"></span>
+              <p class="textos text-capitalize texto-contacto">
+                contactanos
+              </p></a
+            >
+            <a
+              class="
+                nav-link
+                col-4 col-sm-3
+                d-flex
+                flex-column
+                align-items-center
+                justify-content-center
+                texto-disabled
+              "
+              id="nav-profile-tab"
+              data-toggle="tab"
+              href="#nav-profile"
+              role="tab"
+            >
+              <span class="ti-map icono-contacto mb-3"></span>
+              <p class="textos text-capitalize texto-contacto">visitanos</p></a
+            >
+            <a
+              class="
+                nav-link
+                col-4 col-sm-3
+                d-flex
+                flex-column
+                align-items-center
+                justify-content-center
+                texto-disabled
+              "
+              id="nav-contact-tab"
+              data-toggle="tab"
+              href="#nav-contact"
+              role="tab"
+            >
+              <span class="ti-vector icono-contacto mb-3"></span>
+              <p class="textos text-capitalize texto-contacto">siguenos</p></a
+            >
           </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
           <div
-            class="
-              col-4 col-sm-3
-              d-flex
-              justify-content-center
-              flex-column
-              align-items-center
-            "
+            class="tab-pane fade show active"
+            id="nav-home"
+            role="tabpanel"
+            aria-labelledby="nav-home-tab"
           >
-            <span class="ti-map icono-contacto texto-disabled mb-3"></span>
-            <p class="textos text-capitalize texto-contacto texto-disabled">
-              visitanos
-            </p>
+            <div class="row d-flex justify-content-center">
+              <div class="col-12 col-md-10 col-lg-9">
+                <div class="grupo-input mb-4 mb-md-5">
+                  <input
+                    class="form-mio text-white"
+                    type="text"
+                    placeholder="*email"
+                  />
+                </div>
+                <div class="grupo-input mb-4 mb-md-5">
+                  <input
+                    class="form-mio text-white"
+                    type="text"
+                    placeholder="*nombre"
+                  />
+                </div>
+                <div class="grupo-input mb-4 mb-md-5">
+                  <input
+                    class="form-mio text-white"
+                    type="text"
+                    placeholder="*asunto"
+                  />
+                </div>
+                <div class="grupo-input mb-4 mb-md-5">
+                  <input
+                    class="form-mio text-white"
+                    type="text"
+                    placeholder="*mensaje"
+                  />
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <div class="btn btn-form text-uppercase text-white py-2 px-5">
+                  enviar
+                </div>
+              </div>
+            </div>
           </div>
-          <div
-            class="
-              col-4 col-sm-3
-              d-flex
-              justify-content-center
-              flex-column
-              align-items-center
-            "
-          >
-            <span class="ti-vector icono-contacto texto-disabled mb-3"></span>
-            <p class="textos text-capitalize texto-contacto texto-disabled">
-              siguenos
-            </p>
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel">
+            <div class="row d-flex justify-content-center">
+              <div class="col-12 col-md-10 col-xl-9 contenido-map"></div>
+            </div>
           </div>
-        </div>
-        <div class="row pt-5 d-flex justify-content-center">
-          <div class="col-12 col-md-10 col-lg-9">
-            <input
-              class="form-mio mb-4 mb-md-5 text-white"
-              type="text"
-              placeholder="*email"
-            />
-            <input
-              class="form-mio mb-4 mb-md-5 text-white"
-              type="text"
-              placeholder="*nombre"
-            />
-            <input
-              class="form-mio mb-4 mb-md-5 text-white"
-              type="text"
-              placeholder="*asunto"
-            />
-            <input
-              class="form-mio mb-4 mb-md-5 text-white"
-              type="text"
-              placeholder="*mensaje"
-            />
-          </div>
-          <div class="col-12 d-flex justify-content-center">
-            <div class="btn btn-form text-uppercase text-white py-2 px-5">
-              enviar
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel">
+            <div class="row contacto">
+              <div class="col-4 pb-4">
+                <div class="iconos-contacto-footer">
+                  <div
+                    class="
+                      contenedor-icono-footer
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <span class="ti-facebook text-white"></span>
+                  </div>
+                  <div class="contenedor-descripcion-icono">
+                    <a
+                      href=""
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <h5
+                        class="textos text-uppercase text-white titulos-icono"
+                      >
+                        <span class="red-social">facebook</span>
+                        <span class="ti-new-window"></span>
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 pb-4">
+                <div class="iconos-contacto-footer">
+                  <div
+                    class="
+                      contenedor-icono-footer
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <span class="ti-google text-white"></span>
+                  </div>
+                  <div class="contenedor-descripcion-icono">
+                    <a
+                      href=""
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <h5
+                        class="textos text-uppercase text-white titulos-icono"
+                      >
+                        <span class="red-social">google</span>
+                        <span class="ti-new-window"></span>
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 pb-4">
+                <div class="iconos-contacto-footer">
+                  <div
+                    class="
+                      contenedor-icono-footer
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <span class="ti-twitter-alt text-white"></span>
+                  </div>
+                  <div class="contenedor-descripcion-icono">
+                    <a
+                      href=""
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <h5
+                        class="textos text-uppercase text-white titulos-icono"
+                      >
+                        <span class="red-social">twitter</span>
+                        <span class="ti-new-window"></span>
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 pb-4">
+                <div class="iconos-contacto-footer">
+                  <div
+                    class="
+                      contenedor-icono-footer
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <span class="ti-instagram text-white"></span>
+                  </div>
+                  <div class="contenedor-descripcion-icono">
+                    <a
+                      href=""
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <h5
+                        class="textos text-uppercase text-white titulos-icono"
+                      >
+                        <span class="red-social">instagram</span>
+                        <span class="ti-new-window"></span>
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 pb-4">
+                <div class="iconos-contacto-footer">
+                  <div
+                    class="
+                      contenedor-icono-footer
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <span class="ti-linkedin text-white"></span>
+                  </div>
+                  <div class="contenedor-descripcion-icono">
+                    <a
+                      href=""
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <h5
+                        class="textos text-uppercase text-white titulos-icono"
+                      >
+                        <span class="red-social">linkedin</span>
+                        <span class="ti-new-window"></span>
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 pb-4">
+                <div class="iconos-contacto-footer">
+                  <div
+                    class="
+                      contenedor-icono-footer
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <span class="ti-pinterest text-white"></span>
+                  </div>
+                  <div class="contenedor-descripcion-icono">
+                    <a
+                      href=""
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <h5
+                        class="textos text-uppercase text-white titulos-icono"
+                      >
+                        <span class="red-social">pinterest</span>
+                        <span class="ti-new-window"></span>
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 pb-4">
+                <div class="iconos-contacto-footer">
+                  <div
+                    class="
+                      contenedor-icono-footer
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <span class="ti-youtube text-white"></span>
+                  </div>
+                  <div class="contenedor-descripcion-icono">
+                    <a
+                      href=""
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <h5
+                        class="textos text-uppercase text-white titulos-icono"
+                      >
+                        <span class="red-social">youtube</span>
+                        <span class="ti-new-window"></span>
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 pb-4">
+                <div class="iconos-contacto-footer">
+                  <div
+                    class="
+                      contenedor-icono-footer
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <span class="ti-vimeo-alt text-white"></span>
+                  </div>
+                  <div class="contenedor-descripcion-icono">
+                    <a
+                      href=""
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <h5
+                        class="textos text-uppercase text-white titulos-icono"
+                      >
+                        <span class="red-social">vimeo</span>
+                        <span class="ti-new-window"></span>
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 pb-4">
+                <div class="iconos-contacto-footer">
+                  <div
+                    class="
+                      contenedor-icono-footer
+                      d-flex
+                      justify-content-center
+                      align-items-center
+                    "
+                  >
+                    <span class="ti-skype text-white"></span>
+                  </div>
+                  <div class="contenedor-descripcion-icono">
+                    <a
+                      href=""
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <h5
+                        class="textos text-uppercase text-white titulos-icono"
+                      >
+                        <span class="red-social">skype</span>
+                        <span class="ti-new-window"></span>
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

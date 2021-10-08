@@ -112,6 +112,7 @@ contenedorImagen.forEach((contenedor) => {
 });
 
 //SERVICIOS
+let iconosServicios = document.querySelectorAll(".contenedor-iconos");
 
 let contenidoTitulos = [
   '<span class="span-titulo-servicios">construimos las mejores marcas.</span>' +
@@ -162,8 +163,6 @@ let cambiarEstilos = (e) => {
   });
   esteIcono.classList.add("seleccionado");
 };
-
-let iconosServicios = document.querySelectorAll(".contenedor-iconos");
 
 iconosServicios.forEach((icono) => {
   icono.addEventListener("click", cambiarContenido);
