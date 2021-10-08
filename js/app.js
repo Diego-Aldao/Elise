@@ -2,6 +2,7 @@ var swiper2 = new Swiper(".swiper-proceso", {
   spaceBetween: 500,
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 });
 var swiper = new Swiper(".mySwiper", {
@@ -32,6 +33,7 @@ var swiper3 = new Swiper(".swiper-equipo", {
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 });
 
@@ -44,6 +46,7 @@ var swiper4 = new Swiper(".swiper-noticias", {
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 });
 
