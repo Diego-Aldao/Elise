@@ -283,3 +283,44 @@ slidesNoticias.forEach((slide) => {
 slidesNoticias.forEach((slide) => {
   slide.addEventListener("mouseleave", animarTarjetasSalida);
 });
+
+//GSAP equipo
+
+const animacionImagenEquipo = (e) => {
+  let descripcionEquipo = e.currentTarget.querySelector(".descripcion-equipo");
+  let imagenEquipo = e.currentTarget.querySelector(".imagenes-equipo");
+  gsap.to(descripcionEquipo, {
+    top: "0px",
+    duration: 0.5,
+    ease: Power4.easeOut,
+  });
+  gsap.to(imagenEquipo, {
+    duration: 0.5,
+    top: "50%",
+    ease: Power4.easeOut,
+  });
+};
+
+const animacionImagenEquipoSalida = (e) => {
+  let descripcionEquipo = e.currentTarget.querySelector(".descripcion-equipo");
+  let imagenEquipo = e.currentTarget.querySelector(".imagenes-equipo");
+  gsap.to(descripcionEquipo, {
+    top: "-100%",
+    duration: 0.5,
+    ease: Power4.easeOut,
+  });
+  gsap.to(imagenEquipo, {
+    duration: 0.5,
+    top: "0px",
+    ease: Power4.easeOut,
+  });
+};
+
+let slideEquipo = document.querySelectorAll(".slide-equipo");
+
+slideEquipo.forEach((contenedor) => {
+  contenedor.addEventListener("mouseover", animacionImagenEquipo);
+});
+slideEquipo.forEach((contenedor) => {
+  contenedor.addEventListener("mouseleave", animacionImagenEquipoSalida);
+});
