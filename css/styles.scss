@@ -84,6 +84,19 @@ a {
   }
 }
 
+.tarjeta-slider {
+  background: $color-principal;
+  padding: 40px 20px;
+  .titulo-tarjeta {
+    font-size: 1.625rem;
+    letter-spacing: 2px;
+    font-family: $fuentePrincipalRegular;
+  }
+  .descripcion-tarjeta::first-letter {
+    text-transform: capitalize;
+  }
+}
+
 .container-md {
   padding-bottom: 100px;
 }
@@ -436,19 +449,6 @@ a {
   }
 }
 
-.tarjeta-slider {
-  background: $color-principal;
-  padding: 40px 20px;
-  .titulo-tarjeta {
-    font-size: 1.625rem;
-    letter-spacing: 2px;
-    font-family: $fuentePrincipalRegular;
-  }
-  .descripcion-tarjeta::first-letter {
-    text-transform: capitalize;
-  }
-}
-
 .swiper-proceso {
   width: 100%;
   height: 85vh;
@@ -574,9 +574,12 @@ a {
 
 .swiper-noticias {
   width: 100%;
-  height: 430px;
+  height: 410px;
+  padding-top: 60px;
   .swiper-slide {
     background: url("../images/noticias/1.jpg") center / cover;
+    overflow: hidden;
+    position: relative;
   }
   .swiper-slide:nth-child(2) {
     background: url("../images/noticias/2.jpg") center / cover;
@@ -593,14 +596,32 @@ a {
   .tarjeta-slider {
     padding: 24px;
     width: 75%;
-    max-width: 280px;
+    max-width: 230px;
+    position: absolute;
+  }
+  .tarjeta-1 {
+    right: 0px;
+  }
+  .tarjeta-2 {
+    right: -150%;
+    .titulo-tarjeta {
+      font-size: 1.1rem;
+    }
   }
   .sub-tarjeta {
     letter-spacing: 1px;
     color: #ececec;
   }
   .titulo-tarjeta {
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+  }
+  span {
+    color: #fff;
+    font-size: clamp(1.5rem, 7vw, 1.9rem);
+    margin-right: 13px;
+  }
+  .paginacion-equipo {
+    bottom: 92%;
   }
 }
 

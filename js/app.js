@@ -36,7 +36,7 @@ var swiper3 = new Swiper(".swiper-equipo", {
 });
 
 var swiper4 = new Swiper(".swiper-noticias", {
-  spaceBetween: 30,
+  spaceBetween: 50,
   breakpoints: {
     992: {
       slidesPerView: 2,
@@ -221,7 +221,7 @@ iconosContactoFooter.forEach((icono) => {
 let parentInputs = document.querySelectorAll(".grupo-input");
 let animarInputs = (e) => {
   let divsAnimacion = document.querySelectorAll(".animacion-input");
-  let esteDiv = e.currentTarget.children[0];
+  let esteDiv = e.currentTarget.querySelector(".animacion-input");
   divsAnimacion.forEach((div) => {
     gsap.to(div, {
       left: "-100%",
@@ -234,9 +234,49 @@ let animarInputs = (e) => {
     duration: 0.5,
     ease: Power4.easeOut,
   });
-  console.log(esteDiv);
 };
 
 parentInputs.forEach((parent) => {
   parent.addEventListener("click", animarInputs);
+});
+
+//NOTICIAS
+
+let slidesNoticias = document.querySelectorAll(".slide-noticias");
+
+let animarTarjetasEntrada = (e) => {
+  let tarjetaUno = e.currentTarget.querySelector(".tarjeta-1");
+  let tarjetaDos = e.currentTarget.querySelector(".tarjeta-2");
+  gsap.to(tarjetaUno, {
+    right: "-150%",
+    duration: 1,
+    ease: Power4.easeOut,
+  });
+  gsap.to(tarjetaDos, {
+    right: "0px",
+    duration: 1,
+    ease: Power4.easeOut,
+  });
+};
+
+let animarTarjetasSalida = (e) => {
+  let tarjetaUno = e.currentTarget.querySelector(".tarjeta-1");
+  let tarjetaDos = e.currentTarget.querySelector(".tarjeta-2");
+  gsap.to(tarjetaUno, {
+    right: "0px",
+    duration: 1,
+    ease: Power4.easeOut,
+  });
+  gsap.to(tarjetaDos, {
+    right: "-150%",
+    duration: 1,
+    ease: Power4.easeOut,
+  });
+};
+
+slidesNoticias.forEach((slide) => {
+  slide.addEventListener("mouseover", animarTarjetasEntrada);
+});
+slidesNoticias.forEach((slide) => {
+  slide.addEventListener("mouseleave", animarTarjetasSalida);
 });
