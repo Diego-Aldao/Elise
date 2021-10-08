@@ -862,6 +862,14 @@ a {
   height: 50px;
   background: white;
   z-index: 3;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  color: #000;
+}
+
+.flotante-up:hover {
+  height: 75px;
+  color: #000;
 }
 
 @media (min-width: 576px) {
