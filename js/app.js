@@ -216,3 +216,27 @@ iconosContactoFooter.forEach((icono) => {
 iconosContactoFooter.forEach((icono) => {
   icono.addEventListener("mouseleave", animacionIconosSalida);
 });
+
+//CONTACTO INPUTS
+let parentInputs = document.querySelectorAll(".grupo-input");
+let animarInputs = (e) => {
+  let divsAnimacion = document.querySelectorAll(".animacion-input");
+  let esteDiv = e.currentTarget.children[0];
+  divsAnimacion.forEach((div) => {
+    gsap.to(div, {
+      left: "-100%",
+      duration: 0.5,
+      ease: Power4.easeOut,
+    });
+  });
+  gsap.to(esteDiv, {
+    left: "0px",
+    duration: 0.5,
+    ease: Power4.easeOut,
+  });
+  console.log(esteDiv);
+};
+
+parentInputs.forEach((parent) => {
+  parent.addEventListener("click", animarInputs);
+});
