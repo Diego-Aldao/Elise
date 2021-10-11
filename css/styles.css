@@ -406,6 +406,10 @@ a {
   }
 }
 
+.contenedor-iconos {
+  cursor: pointer;
+}
+
 .iconos-servicios {
   font-size: 2.3rem;
   font-weight: 400;
@@ -475,6 +479,7 @@ a {
 .col-imagen {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .col-imagen p {
@@ -614,7 +619,7 @@ a {
   padding-top: 40px;
 }
 
-.swiper-equipo .swiper-slide {
+.swiper-equipo .slide-equipo {
   position: relative;
   overflow: hidden;
 }

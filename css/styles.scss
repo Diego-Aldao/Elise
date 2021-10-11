@@ -354,6 +354,9 @@ a {
 }
 
 //INICIO SERVICIOS
+.contenedor-iconos {
+  cursor: pointer;
+}
 .iconos-servicios {
   font-size: 2.3rem;
   font-weight: 400;
@@ -419,6 +422,7 @@ a {
 .col-imagen {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 
   p {
     font-size: 1rem;
@@ -549,7 +553,7 @@ a {
   height: 440px;
   max-width: 350px;
   padding-top: 40px;
-  .swiper-slide {
+  .slide-equipo {
     position: relative;
     overflow: hidden;
   }

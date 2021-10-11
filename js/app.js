@@ -1,5 +1,6 @@
 var swiper2 = new Swiper(".swiper-proceso", {
   spaceBetween: 500,
+  grabCursor: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -21,14 +22,13 @@ var swiper = new Swiper(".mySwiper", {
 var swiper3 = new Swiper(".swiper-equipo", {
   spaceBetween: 30,
   loop: true,
+  grabCursor: true,
   breakpoints: {
     580: {
       slidesPerView: 2,
-      spaceBetween: 30,
     },
     992: {
       slidesPerView: 3,
-      spaceBetween: 50,
     },
   },
   pagination: {
@@ -39,6 +39,7 @@ var swiper3 = new Swiper(".swiper-equipo", {
 
 var swiper4 = new Swiper(".swiper-noticias", {
   spaceBetween: 50,
+  grabCursor: true,
   breakpoints: {
     992: {
       slidesPerView: 2,
