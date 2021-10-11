@@ -1,11 +1,3 @@
-var swiper2 = new Swiper(".swiper-proceso", {
-  spaceBetween: 500,
-  grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
 var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
   loop: true,
@@ -13,6 +5,15 @@ var swiper = new Swiper(".mySwiper", {
   speed: 1000,
   lazy: true,
   preloadImages: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+var swiper2 = new Swiper(".swiper-proceso", {
+  spaceBetween: 500,
+  grabCursor: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -325,3 +326,20 @@ slideEquipo.forEach((contenedor) => {
 slideEquipo.forEach((contenedor) => {
   contenedor.addEventListener("mouseleave", animacionImagenEquipoSalida);
 });
+
+//LEAFLET
+let map = L.map("mapa").setView([-34.638434, -68.297539], 13);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 17,
+  tileSize: 512,
+  zoomOffset: -1,
+}).addTo(map);
+
+L.marker([-34.638434, -68.297539]).addTo(map).bindPopup("Elise").openPopup();
+
+setInterval(function () {
+  map.invalidateSize();
+}, 100); //PARA QUE NO HAYA ERRORES DE TAMAÑO ENTRE EL MAPA Y EL CONTENEDOR DE BOOTSTRAP
