@@ -3,8 +3,6 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
   autoplay: true,
   speed: 1000,
-  lazy: true,
-  preloadImages: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -343,3 +341,32 @@ L.marker([-34.638434, -68.297539]).addTo(map).bindPopup("Elise").openPopup();
 setInterval(function () {
   map.invalidateSize();
 }, 100); //PARA QUE NO HAYA ERRORES DE TAMAÑO ENTRE EL MAPA Y EL CONTENEDOR DE BOOTSTRAP
+
+//OBSERVER
+const crearObservador = (animacion, tiempo) => {
+  const secciones = document.querySelectorAll(animacion);
+
+  const options = {
+    root: null, //es el default, todo el viewport
+    threshold: 0.3, // 0 dispara en el momento que el elemento entra al observador, 1 dispara cuando todo el elemento ya esta dentro del observador
+  };
+  const observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      } //si no esta en la pantalla, termina la funcion
+      gsap.to(entry.target, {
+        top: "0px",
+        opacity: 1,
+        duration: tiempo,
+        ease: Power4.easeOut,
+      });
+    });
+  }, options);
+  secciones.forEach((section) => {
+    observer.observe(section); //al usar querySelectorAll tengo un array con las secciones, y lo que quiero lograr es observar uno por uno
+  });
+};
+crearObservador(".intersection-obs", 0.8);
+crearObservador(".intersection-obs-2", 1);
+crearObservador(".intersection-obs-3", 0.5);
