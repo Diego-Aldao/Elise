@@ -219,7 +219,7 @@ window.onload = () => {
 
   iconosContactoFooter.forEach((icono) => {
     icono.addEventListener("mouseover", function (e) {
-      animacionIconos(e, "-100%", 1, "0px");
+      animacionIconos(e, "100%", 1, "0px");
     });
     icono.addEventListener("mouseleave", function (e) {
       animacionIconos(e, "0px", 0, "0px 0px 30px");
@@ -248,6 +248,25 @@ window.onload = () => {
   let parentInputs = document.querySelectorAll(".grupo-input");
   parentInputs.forEach((parent) => {
     parent.addEventListener("click", animarInputs);
+  });
+
+  const animarBtn = (e, bgLeft) => {
+    let bgBoton = e.currentTarget.querySelector(".bg-texto-form");
+    gsap.to(bgBoton, {
+      left: bgLeft,
+      duration: 0.5,
+      ease: Power4.easeOut,
+    });
+  };
+
+  let botones = document.querySelectorAll(".btn");
+  botones.forEach((boton) => {
+    boton.addEventListener("mouseleave", function (e) {
+      animarBtn(e, "-100%");
+    });
+    boton.addEventListener("mouseover", function (e) {
+      animarBtn(e, "0px");
+    });
   });
 
   //NOTICIAS
