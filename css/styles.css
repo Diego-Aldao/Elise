@@ -1,3 +1,24 @@
+/*
+INDICE:
+  0.1- FUENTES
+  0.2- COLORES
+  0.3- GENERALES
+  0.4- BOTONES/PAGINACION
+  1- HEADER PRINCIPAL
+  2- NAV
+  3- CONTENIDO PRINCIPAL
+  4- SERVICIOS
+  5- TRABAJOS
+  6- PROCESO
+  7- EQUIPO
+  8- CONTACTO
+    8.1- NAVEGACION CONTACTO
+    8.2- INPUTS CONTACTO
+    8.3- MAPA CONTACTO
+    8.4- REDES CONTACTO
+  9- FOOTER
+  10- OBSERVER
+*/
 @font-face {
   font-family: "Dosis Light";
   src: url("../fonts/Dosis-Light.ttf");
@@ -79,7 +100,6 @@ a {
 
 .col-headers .texto-headers {
   font-family: "Dosis Regular";
-  color: #000;
   font-size: 3.125rem;
   letter-spacing: 0.1em;
   line-height: 1.2;
@@ -180,47 +200,6 @@ a {
   border-radius: 50%;
   background: #fff;
   position: absolute;
-}
-
-.navbar {
-  -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.178);
-          box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.178);
-  top: 0px;
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 99999999;
-}
-
-.navbar-brand {
-  color: #000;
-  font-family: "Birthstone";
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  line-height: 0.8;
-}
-
-.nav-link {
-  font-size: 0.8125rem;
-  font-family: "Open Sans";
-  font-weight: 400;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.nav-link:hover {
-  color: #af997f;
-}
-
-.navbar-brand:hover {
-  color: #000;
-}
-
-@media (min-width: 850px) {
-  .nav-link {
-    letter-spacing: 1px;
-  }
-  .navbar {
-    height: 80px;
-  }
 }
 
 .mySwiper {
@@ -351,6 +330,47 @@ a {
   }
 }
 
+.navbar {
+  -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.178);
+          box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.178);
+  top: 0px;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 99999999;
+}
+
+.navbar-brand {
+  color: #000;
+  font-family: "Birthstone";
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 0.8;
+}
+
+.nav-link {
+  font-size: 0.8125rem;
+  font-family: "Open Sans";
+  font-weight: 400;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: #af997f;
+}
+
+.navbar-brand:hover {
+  color: #000;
+}
+
+@media (min-width: 850px) {
+  .nav-link {
+    letter-spacing: 1px;
+  }
+  .navbar {
+    height: 80px;
+  }
+}
+
 .img-col-1,
 .video-col-1 {
   width: 100%;
@@ -425,24 +445,17 @@ a {
   opacity: 0.6;
 }
 
-.seleccionado .iconos-servicios,
-.seleccionado .texto-servicios {
-  opacity: 1;
-}
-
-.seleccionado .iconos-servicios {
-  color: #af997f;
-}
-
 .textos-secundarios {
   color: #bbbaba;
   line-height: 2;
+  position: relative;
 }
 
 .titulo-servicios {
   font-size: clamp(1.25rem, 5vw, 1.32rem);
   line-height: 1.7;
   max-width: 100%;
+  position: relative;
 }
 
 .span-titulo-servicios {
@@ -451,6 +464,15 @@ a {
 
 .span-titulo-servicios::first-letter {
   text-transform: capitalize;
+}
+
+.seleccionado .iconos-servicios,
+.seleccionado .texto-servicios {
+  opacity: 1;
+}
+
+.seleccionado .iconos-servicios {
+  color: #af997f;
 }
 
 @media (min-width: 992px) {
@@ -943,20 +965,26 @@ a {
   }
 }
 
-.intersection-obs-2 {
-  top: 500px;
+.intersection-obs,
+.intersection-obs-2,
+.intersection-obs-3 {
   opacity: 0;
 }
 
+.intersection-obs,
 .intersection-obs-3 {
   position: relative;
-  top: 150px;
-  opacity: 0;
 }
 
 .intersection-obs {
-  position: relative;
   top: 50px;
-  opacity: 0;
+}
+
+.intersection-obs-2 {
+  top: 500px;
+}
+
+.intersection-obs-3 {
+  top: 150px;
 }
 /*# sourceMappingURL=styles.css.map */
