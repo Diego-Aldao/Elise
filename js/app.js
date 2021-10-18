@@ -72,50 +72,6 @@ window.onload = () => {
     scrollearBarraSuperior();
   };
 
-  //GSAP TRABAJOS
-  const animacionImagen = (e) => {
-    let contenidoImagen = e.currentTarget.querySelector(
-      ".contenido-imagen-trabajo"
-    );
-    let imagen = e.currentTarget.querySelector(".imagenes-trabajos");
-    gsap.to(contenidoImagen, {
-      top: "0px",
-      duration: 0.5,
-      ease: Power4.easeOut,
-    });
-    gsap.to(imagen, {
-      duration: 0.5,
-      top: "50%",
-      ease: Power4.easeOut,
-    });
-  };
-
-  const animacionImagenSalida = (e) => {
-    let contenidoImagen = e.currentTarget.querySelector(
-      ".contenido-imagen-trabajo"
-    );
-    let imagen = e.currentTarget.querySelector(".imagenes-trabajos");
-    gsap.to(contenidoImagen, {
-      top: "-100%",
-      duration: 0.5,
-      ease: Power4.easeOut,
-    });
-    gsap.to(imagen, {
-      duration: 0.5,
-      top: "0px",
-      ease: Power4.easeOut,
-    });
-  };
-
-  let contenedorImagen = document.querySelectorAll(".col-imagen");
-
-  contenedorImagen.forEach((contenedor) => {
-    contenedor.addEventListener("mouseover", animacionImagen);
-  });
-  contenedorImagen.forEach((contenedor) => {
-    contenedor.addEventListener("mouseleave", animacionImagenSalida);
-  });
-
   //SERVICIOS
   let iconosServicios = document.querySelectorAll(".contenedor-iconos");
 
@@ -194,39 +150,90 @@ window.onload = () => {
     icono.addEventListener("click", cambiarEstilosServicios);
   });
 
-  //CONTACTO (ICONOS SEGUIR)
-  const animacionIconos = (e, iconoTop, tituloOpacity, tituloMargin) => {
-    let contenedorIconos = e.currentTarget.querySelector(
-      ".contenedor-icono-footer"
+  //TRABAJOS
+  const animacionImagen = (e, topContenido, topImagen) => {
+    let contenidoImagen = e.currentTarget.querySelector(
+      ".contenido-imagen-trabajo"
     );
-    gsap.to(contenedorIconos, {
+    let imagen = e.currentTarget.querySelector(".imagenes-trabajos");
+    gsap.to(contenidoImagen, {
+      top: topContenido,
       duration: 0.5,
-      top: iconoTop,
       ease: Power4.easeOut,
     });
-    let titulosIconos = e.currentTarget.querySelector(".titulos-icono");
-    gsap.to(titulosIconos, {
-      opacity: tituloOpacity,
+    gsap.to(imagen, {
       duration: 0.5,
-      margin: tituloMargin,
+      top: topImagen,
       ease: Power4.easeOut,
     });
   };
 
-  let iconosContactoFooter = document.querySelectorAll(
-    ".iconos-contacto-footer"
-  );
+  let contenedorImagen = document.querySelectorAll(".col-imagen");
 
-  iconosContactoFooter.forEach((icono) => {
-    icono.addEventListener("mouseover", function (e) {
-      animacionIconos(e, "100%", 1, "0px");
+  contenedorImagen.forEach((contenedor) => {
+    contenedor.addEventListener("mouseover", function (e) {
+      animacionImagen(e, "0px", "50%");
     });
-    icono.addEventListener("mouseleave", function (e) {
-      animacionIconos(e, "0px", 0, "0px 0px 30px");
+    contenedor.addEventListener("mouseleave", function (e) {
+      animacionImagen(e, "-100%", "0px");
     });
   });
-  /*LA MANERA QUE ENCONTRÉ DE PASAR EL EVENTO COMO ARGUMENTO CUANDO HAY MULTIPLES ARGUMENTOS 
+
+  //EQUIPO
+  const animacionImagenEquipo = (e, descripcionTop, imagenTop) => {
+    let descripcionEquipo = e.currentTarget.querySelector(
+      ".descripcion-equipo"
+    );
+    let imagenEquipo = e.currentTarget.querySelector(".imagenes-equipo");
+    gsap.to(descripcionEquipo, {
+      top: descripcionTop,
+      duration: 0.5,
+      ease: Power4.easeOut,
+    });
+    gsap.to(imagenEquipo, {
+      top: imagenTop,
+      duration: 0.5,
+      ease: Power4.easeOut,
+    });
+  };
+
+  let slideEquipo = document.querySelectorAll(".slide-equipo");
+  slideEquipo.forEach((contenedor) => {
+    contenedor.addEventListener("mouseover", function (e) {
+      animacionImagenEquipo(e, "0px", "50%");
+    });
+    contenedor.addEventListener("mouseleave", function (e) {
+      animacionImagenEquipo(e, "-100%", "0px");
+    });
+  });
+
+  //NOTICIAS
+  let animarTarjetas = (e, tarjetaUnoRIght, tarjetaDosRight) => {
+    let tarjetaUno = e.currentTarget.querySelector(".tarjeta-1");
+    let tarjetaDos = e.currentTarget.querySelector(".tarjeta-2");
+    gsap.to(tarjetaUno, {
+      right: tarjetaUnoRIght,
+      duration: 1,
+      ease: Power4.easeOut,
+    });
+    gsap.to(tarjetaDos, {
+      right: tarjetaDosRight,
+      duration: 1,
+      ease: Power4.easeOut,
+    });
+  };
+
+  let slidesNoticias = document.querySelectorAll(".slide-noticias");
+  slidesNoticias.forEach((slide) => {
+    slide.addEventListener("mouseover", function (e) {
+      animarTarjetas(e, "-150%", "0px");
+    });
+    slide.addEventListener("mouseleave", function (e) {
+      animarTarjetas(e, "0px", "-150%");
+    });
+    /*LA MANERA QUE ENCONTRÉ DE PASAR EL EVENTO COMO ARGUMENTO CUANDO HAY MULTIPLES ARGUMENTOS 
   ES CON UNA FUNCION ANONIMA*/
+  });
 
   //CONTACTO INPUTS
   let animarInputs = (e) => {
@@ -269,61 +276,39 @@ window.onload = () => {
     });
   });
 
-  //NOTICIAS
-  let animarTarjetas = (e, tarjetaUnoRIght, tarjetaDosRight) => {
-    let tarjetaUno = e.currentTarget.querySelector(".tarjeta-1");
-    let tarjetaDos = e.currentTarget.querySelector(".tarjeta-2");
-    gsap.to(tarjetaUno, {
-      right: tarjetaUnoRIght,
-      duration: 1,
-      ease: Power4.easeOut,
-    });
-    gsap.to(tarjetaDos, {
-      right: tarjetaDosRight,
-      duration: 1,
-      ease: Power4.easeOut,
-    });
-  };
-
-  let slidesNoticias = document.querySelectorAll(".slide-noticias");
-  slidesNoticias.forEach((slide) => {
-    slide.addEventListener("mouseover", function (e) {
-      animarTarjetas(e, "-150%", "0px");
-    });
-    slide.addEventListener("mouseleave", function (e) {
-      animarTarjetas(e, "0px", "-150%");
-    });
-    /*LA MANERA QUE ENCONTRÉ DE PASAR EL EVENTO COMO ARGUMENTO CUANDO HAY MULTIPLES ARGUMENTOS 
-  ES CON UNA FUNCION ANONIMA*/
-  });
-
-  //EQUIPO
-  const animacionImagenEquipo = (e, descripcionTop, imagenTop) => {
-    let descripcionEquipo = e.currentTarget.querySelector(
-      ".descripcion-equipo"
+  //CONTACTO ICONOS SEGUIR
+  const animacionIconos = (e, iconoTop, tituloOpacity, tituloMargin) => {
+    let contenedorIconos = e.currentTarget.querySelector(
+      ".contenedor-icono-footer"
     );
-    let imagenEquipo = e.currentTarget.querySelector(".imagenes-equipo");
-    gsap.to(descripcionEquipo, {
-      top: descripcionTop,
+    gsap.to(contenedorIconos, {
       duration: 0.5,
+      top: iconoTop,
       ease: Power4.easeOut,
     });
-    gsap.to(imagenEquipo, {
-      top: imagenTop,
+    let titulosIconos = e.currentTarget.querySelector(".titulos-icono");
+    gsap.to(titulosIconos, {
+      opacity: tituloOpacity,
       duration: 0.5,
+      margin: tituloMargin,
       ease: Power4.easeOut,
     });
   };
 
-  let slideEquipo = document.querySelectorAll(".slide-equipo");
-  slideEquipo.forEach((contenedor) => {
-    contenedor.addEventListener("mouseover", function (e) {
-      animacionImagenEquipo(e, "0px", "50%");
+  let iconosContactoFooter = document.querySelectorAll(
+    ".iconos-contacto-footer"
+  );
+
+  iconosContactoFooter.forEach((icono) => {
+    icono.addEventListener("mouseover", function (e) {
+      animacionIconos(e, "100%", 1, "0px");
     });
-    contenedor.addEventListener("mouseleave", function (e) {
-      animacionImagenEquipo(e, "-100%", "0px");
+    icono.addEventListener("mouseleave", function (e) {
+      animacionIconos(e, "0px", 0, "0px 0px 30px");
     });
   });
+  /*LA MANERA QUE ENCONTRÉ DE PASAR EL EVENTO COMO ARGUMENTO CUANDO HAY MULTIPLES ARGUMENTOS 
+    ES CON UNA FUNCION ANONIMA*/
 
   //LEAFLET (MAPA)
   let map = L.map("mapa").setView([-34.638434, -68.297539], 13);
